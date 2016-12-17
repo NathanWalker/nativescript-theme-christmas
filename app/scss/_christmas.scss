@@ -1,0 +1,29 @@
+// We will base our custom theme off the core theme's light variables
+@import 'nativescript-theme-core/scss/light';
+
+// We can now override all the core variables found here:
+// https://github.com/NativeScript/theme/blob/master/app/scss/_variables.scss
+
+$primary: #A32C28;
+$accent: #384030;
+$secondary: #7B8055;
+
+// ActionBar
+$ab-background: $primary;
+$ab-color: #fff;
+
+// Buttons
+$btn-color: $accent;
+$btn-color-secondary: darken($accent, 5%);
+
+// Import the theme’s main ruleset
+// core class definitions which will use the variables above :)
+@import 'nativescript-theme-core/scss/index';
+
+// Place any CSS rules you want to apply on both iOS and Android here.
+// This is where the majority of your custom CSS will go.
+
+// for example, if we wanted to use font-awesome throughout our theme
+.fa {
+  font-family: FontAwesome, fontawesome-webfont;
+}
